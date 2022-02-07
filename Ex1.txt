@@ -1,0 +1,14 @@
+1. O que faz o seguinte programa?
+#include <stdio.h>
+int main()
+{
+int x;
+scanf("%d",&x);
+printf("%d",x);
+return (0);
+}
+
+Resposta: 
+Declara a variável x inteira
+Usa a função scanf para ler um numero inteiro que o usuário digitar e
+Usa printf para exibir esse numero inteiro
