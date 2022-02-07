@@ -1,2 +1,2 @@
 # Exercicios-Linguagem-C-para-Eng
-Respostas dos exercicios da disciplina
+Respostas da lista de problemas da disciplina Linguagem C para Engenharia (ENG 03049)
