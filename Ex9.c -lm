@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int
+main ()
+{
+  int i;
+  float x;
+  float seno;
+  for (i = 1; x != 0; i++)
+    {
+      printf ("\nDigite o angulo %d° em radianos para extrair o seno:\n",i);
+      scanf ("%f", &x);
+      seno = sin (x);
+      printf ("%f eh o seno de %f radianos\n", seno, x);
+    }
+  if (x == 0)
+    {
+      printf ("\nangulo 0");
+    }
+  return (0);
+}
