@@ -1,0 +1,20 @@
+O que imprime o programa a seguir? Tente entendê-lo e responder. A seguir, execute-o e comprove o resultado.
+
+# include <stdio.h>
+main()
+{
+int t, i, M[3][4];
+for (t=0; t<3; ++t)
+   for (i=0; i<4; ++i)
+      M[t][i] = (t*4)+i+1;
+
+for (t=0; t<3; ++t)
+{
+   for (i=0; i<4; ++i)
+       printf ("%3d ", M[t][i]);
+   printf ("\n");
+}
+}
+
+Resposta: O programa cria uma matriz bidimensional que contem os numeros
+de 1 a 12 seguindo a ordem das linhas da esquerda pra direita.

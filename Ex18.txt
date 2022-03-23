@@ -1,0 +1,38 @@
+a) Sendo p declarado de forma int ∗ p;. Explique a diferenca entre p + +; (∗p) + +; ∗(p + +); O que quer dizer
+∗(p + 10);? Explique o que voce entendeu da comparacao entre ponteiros. 
+
+- p++: incrementa o ponteiro, ou seja o endereço, adicionando uma posição, o ponteiro p passará a apontar para a 
+posição de memória imediatamente superior. Da mesma forma, em um vetor, o ponteiro passará a apontar a próxima 
+posição do vetor.
+- (*p)++: Incrementa o conteúdo que o p aponta, ou seja, o valor contido na memoria que p está apontando.
+- *(p++): Incrementa p (como em p++) e acessa o valor encontrado na nova posição. Se em um vetor, esta expressão 
+acessa o valor da posição imediatamente superior a armazenada em p antes do incremento.
+
+- *(p+10) Acessa o valor encontrado 10 posições a frente de p. Sem haver incremento. Se em um vetor, irá acessar 
+a décima posição após a que está sendo apontada.
+
+- A comparação de ponteiros ocorre como outras variaveis, podemos por exemplo comparar se dois ponteiros apontam
+para a mesma posição de memória usando os operadores == e != e tambem podemos comparar se apontam para uma posição 
+superior ou inferior utilizando > e <.
+
+
+b) Qual o valor de y no final do
+programa? Tente primeiro descobrir e depois verifique no computador o resultado. A seguir, escreva um /*
+comentario */ em cada comando de atribuicao explicando o que ele faz e o valor da variavel a esquerda do ’=’
+apos sua execucao.
+
+Solução:
+O valor de y é 4, e o programa comentado fica:
+
+int main()
+{
+int y, *p, x;
+y = 0;       /* atribui o valor 0 a y*/
+p = &y;      /* atribui o endereco de y ao ponteiro p que contem o endereco de y (ex:DS:FFF4)*/
+x = *p;      /* atribui o conteudo de onde p aponta (valor de y) para x, que agora vale 0 assim como y */
+x = 4;       /* atribui 4 a x */
+(*p)++;      /* incrementa de 1 o conteudo de onde p aponta, agora o valor de y é 1 */
+x--;         /* decrementa 1 de x passando a valer 3 */
+(*p) += x;   /* adiciona x ao conteudo de onde p aponta, somando 3 ao valor de y que era 1 e passa a valer 4 */
+printf ("y = %d\n", y); /* imprime "y = 4" */
+}

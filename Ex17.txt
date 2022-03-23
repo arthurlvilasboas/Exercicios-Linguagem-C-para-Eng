@@ -1,0 +1,24 @@
+O que o programa a seguir faz? Qual é o resultado obtido se a string fornecida for:
+a) "Ah! Eu to maluco!"
+b) "5*4+(3^3)+4*5"
+
+#include <stdio.h>
+#include <string.h>
+#define TAM 20
+main ()
+{
+    char s[TAM];
+    int c, i, j;
+
+    for (i=0, j=strlen(s)-1; i<j; i++, j--)
+    {
+       c = s[i];
+       s[i] = s[j];
+       s[j] = c;
+    }
+}
+
+Solução:
+A função inverte a string fornecida. Os resultados são:
+a) "Ah! Eu to maluco!" => "!oculam ot uE !hA"
+b) "5*4+(3^3)+4*5"     => "5*4+)3^3(+4*5"
